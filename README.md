@@ -50,19 +50,8 @@ Example:
 python pe_pwn.py C:\path\to\file.exe
 ```
 ### 3. Output
-The script will display detailed information about the PE file, including headers, sections, imports, exports, and resources.
+The script will display detailed information about the PE file, including headers, sections, imports, exports, and resources. Here is an example of the output format:
 
-## Supported File Formats
-This tool works with the following Windows PE file formats:
-- **Executable files (.exe)**
-- **Dynamic-Link Libraries (.dll)**
-- **Driver files (.sys)**
-- **Control Panel files (.cpl)**
-- **Screensaver files (.scr)**
-- **Legacy .com files (if they are in PE format)**
-
-## Example Output
-When you run the script, you will see output similar to this:
 ```bash
 ====== PE File Analysis ======
 File: C:\path\to\file.exe
@@ -112,6 +101,17 @@ Library: user32.dll
   Resource Type: 0x1 (RT_ICON)
 
 ```
+
+
+## Supported File Formats
+This tool works with the following Windows PE file formats:
+- **Executable files (.exe)**
+- **Dynamic-Link Libraries (.dll)**
+- **Driver files (.sys)**
+- **Control Panel files (.cpl)**
+- **Screensaver files (.scr)**
+- **Legacy .com files (if they are in PE format)**
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
