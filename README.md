@@ -113,6 +113,10 @@ This tool works with the following Windows PE file formats:
 - **Legacy .com files (if they are in PE format)**
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thanks to the contributors for their valuable feedback and improvements.
 
