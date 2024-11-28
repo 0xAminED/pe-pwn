@@ -26,3 +26,93 @@ You can install the required library using pip:
 
 ```bash
 pip install pefile
+```
+OR
+```bash
+pip install -r requirements.txt
+```
+## Usage
+
+### 1. Clone the Repository
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/0xAminED/pe-pwn.git
+cd pe-pwn
+```
+### 2. Run the Script
+Use the following command to analyze a PE file. Replace <path_to_pe_file> with the path to the PE file you want to analyze.
+```bash
+python pe_pwn.py <path_to_pe_file>
+```
+Example:
+```bash
+python pe_pwn.py C:\path\to\file.exe
+```
+### 3. Output
+The script will display detailed information about the PE file, including headers, sections, imports, exports, and resources.
+
+## Supported File Formats
+This tool works with the following Windows PE file formats:
+- **Executable files (.exe)**
+- **Dynamic-Link Libraries (.dll)**
+- **Driver files (.sys)**
+- **Control Panel files (.cpl)**
+- **Screensaver files (.scr)**
+- **Legacy .com files (if they are in PE format)**
+
+## Example Output
+When you run the script, you will see output similar to this:
+```bash
+====== PE File Analysis ======
+File: C:\path\to\file.exe
+
+== DOS Header ==
+{
+  'e_magic': 23117, 
+  'e_cblp': 0, 
+  'e_cp': 0, 
+  ...
+}
+
+== NT Headers ==
+{
+  'Signature': b'PE\0\0',
+  'FileHeader': { ... },
+  'OptionalHeader': { ... }
+}
+
+== File Header ==
+{
+  'Machine': 332, 
+  'NumberOfSections': 5, 
+  'TimeDateStamp': 1390763812, 
+  ...
+}
+
+== Sections ==
+Name: .text
+  Virtual Address: 0x1000
+  Virtual Size: 0x2000
+  Raw Size: 0x4000
+  Characteristics: 0x60000020
+
+...
+
+== Imported Functions ==
+Library: user32.dll
+  MessageBoxW at 0x12345678
+
+...
+
+== Exported Functions ==
+  MyFunction at 0x10001234
+
+== Resources ==
+  Resource Type: 0x1 (RT_ICON)
+
+```
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
